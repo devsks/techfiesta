@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <style>
+            .console
+            {
+                background: black;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                align-items: center;
+            }
+            .console img
+            {
+
+                
+                align-content: center;
+                position: absolute;
+              
+            }
+        </style>
+    </head>
+    <body>
+        <div class="console">
+            <img src="images/console/1.png" alt="" id="img" class="ll"/>
+            <img src="images/console/2.png" alt="" class="clockwise"/>
+            <img src="images/console/3.png" alt="" class="anti-clockwise"/>
+            <img src="images/console/4.png" alt="" class="clockwise"/>
+            <img src="images/console/5.png" alt="" class="anti-clockwise"/>
+            <img src="images/console/6.png" alt="" class="clockwise"/>
+            <img src="images/console/7.png" alt="" class="anti-clockwise"/>
+            <img src="images/console/8.png" alt="" />
+            <img src="images/console/tf logo.png" alt="" />
+        </div>
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script type="text/javascript" src="js/jQueryRotate.js"></script>
+        <script>
+            rot_clock = function()
+            {
+                value =0;
+                setInterval(
+				function() {
+					value +=6;
+					/*if(value > 360)
+					{
+						value=0;
+					}*/	
+                    $(".clockwise").rotate({ animateTo:value});
+				}, 150);
+
+            }
+            rot_anti_clock = function()
+            {
+                value1 =0;
+                setInterval(
+				function() {
+					value1 -=6;
+					if(value1 < -360)
+					{
+						value1=0;
+					}	
+                    $(".anti-clockwise").rotate({ animateTo:value1});
+				}, 100);
+
+            }
+            rot_main_console = function()
+            {
+                value3 =0;
+                setInterval(
+				function() {
+					value3 +=60;
+					/*if(value3 > 360)
+					{
+						value3=0;
+					}*/	
+					$("#img").rotate({ animateTo:value3});
+                }, 2000);
+            }
+           rot_anti_clock();
+            rot_clock();
+            rot_main_console();
+            
+        </script>
+    </body>
+</html>

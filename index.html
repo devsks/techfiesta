@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Techfiesta 2018</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Santosh Kumar Shaw">
+		<link rel="shortcut icon" href="images/TF_logo.png"/>
+
+		
+
+		<link rel="stylesheet" href="css/normalize.min.css">
+
+		<link rel='stylesheet prefetch' href='css/slick.min.css'>
+		<link rel='stylesheet prefetch' href='css/slick-theme.min.css'>
+		
+		<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+	  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:300:400:700'>
+
+
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+		
+		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+  		<link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/slideShow.css" />
+		  <!--[if lte IE 8]>
+			 <link rel="stylesheet" type="text/css" href="css/simple.css" />
+		<![endif]-->
+		
+		
+		<link rel="stylesheet" href="css/event.css">
+		<link rel='stylesheet prefetch' href='css/loader.css'>
+		<style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+ 
+			#Aboutcontainer {
+  background: -webkit-radial-gradient(50% 50%, ellipse, #20202D 0%, #101018 75%, #060612 100%);
+  background: -moz-radial-gradient(50% 50%, ellipse, #20202D 0%, #101018 75%, #060612 100%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+#Aboutcontainer p {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  font-family: Courier, monospace;
+  font-smoothing: antialiased;
+  margin: 0.8em .2;
+  font-size: 22px;
+  color: #B95;
+}
+
+.ghost,
+.glitch {
+  opacity: 0.25;
+}
+
+#message {
+  margin-left: -300px;
+  position: absolute;
+  height: 260px;
+  width: 600px;
+  left: 50%;
+  top: 5%;
+}
+
+#animate {
+  text-shadow: 0 0 8px rgba(209, 194, 165, 0.1);
+  position: absolute;
+  color: #4f4228;
+  bottom: 0;
+}
+
+
+#Aboutcontainer:before {
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  left: 0;
+  top: 0;
+}
+    </style>
+
+  
+
+	</head>
+    <body>
+		
+			<div id="loader-wrapper" style="position:absolute;">
+				<div id="loader">
+					</div>
+					<div class="loader-section section-left"></div>
+					<div class="loader-section section-right" ></div>
+	
+					</div>	
+				
+			</div>
+			<div id="content"></div>
+		
+        <div class="container">
+		
+			
+			<div class="st-container">
+			
+				<input type="radio" name="radio-set" checked="checked" id="st-control-1"/>
+				<a href="#st-panel-1" onclick="$()">Home</a>
+				<input type="radio" name="radio-set" id="st-control-2" onclick="mywrite()"/>
+				<a href="#st-panel-2">About</a>
+				<input type="radio" name="radio-set" id="st-control-3"/>
+				<a href="#st-panel-3">Events</a>
+				<input type="radio" name="radio-set" id="st-control-4"/>
+				<a href="#st-panel-4">Gallery</a>
+				<input type="radio" name="radio-set" id="st-control-5"/>
+				<a href="#st-panel-5">Contact Us</a>
+				
+				<div class="st-scroll">
+				
+					<section  class="st-panel" id="st-panel-1"style="background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+					background-repeat: no-repeat;
+					background-size:cover;
+					background-attachment: fixed;
+					background-position: center;
+					background-color:black;
+					"
+					 >
+						<div class="feild">
+
+    				</div>
+						<div id="large-header" class="large-header">
+						<canvas id="demo-canvas"></canvas>
+						</div>
+						<div class="console">
+									<img src="images/console/1.png" alt="a" id="img" >
+									<img src="images/console/2.png" alt="b" class="clockwise"/>
+									<img src="images/console/3.png" alt="c" class="anti-clockwise"/>
+									<img src="images/console/4.png" alt="d" class="clockwise"/>
+									<img src="images/console/5.png" alt="e" class="anti-clockwise"/>
+									<img src="images/console/6.png" alt="f" class="clockwise"/>
+									<img src="images/console/7.png" alt="g" class="anti-clockwise"/>
+									<img src="images/console/8.png" alt="h" />
+									<img src="images/console/tf logo.png" alt="j" />
+						</div>
+						<div class="head_aot">
+							<h2>
+								<span class="main-text  skew">TECHFIESTA
+								  <span class="back-text tech glitch">TECHFIESTA</span>
+								</span>
+								
+							  </h2>
+						</div>
+						<section class="reg_buttons" >
+							<div class="reg_container">
+								<a href="https://goo.gl/forms/IrdQB4DQwpGGMrfZ2" class="reg_btn btn-2 register" target="_blank" 
+								style="font-family:'Quantum'; font-size:3.2em;">Register</a> 
+							</div>
+						</section>
+						<h3 class="event_date">On 11th & 12th April 2018</h3>
+						<a href="http://aot.edu.in/" target="_blank">
+						<img src="images/aot_logo.png"  style="position:absolute;top:0;left:2%; z-index:5;"/>
+						</a>
+						<img src="images/recycle.png" style="width:8.5%;height:15%;position:absolute; left:88%;top:2%;"/>
+						
+						<h3 class="event_name" style="z-index:5;">PIONEER</h3>
+						<h4 class="event_brief" style="z-index:5;">ENVISAGING THE FUTURE<br>SOAR WITH DRONES<br>THE STARTUP</h4>
+						<div class="social-media-buttons" position=relative;>
+								
+								<div class="social-media-button facebook">
+									<a href="https://www.facebook.com/techfiesta2018/" target="__blank">
+								  <i class="fa fa-facebook-official" aria-hidden="true"></i>
+										</a>
+								</div>
+								
+								<div class="social-media-button youtube">
+									<a href="https://www.youtube.com/channel/UC4AZ7xZe_mhOZOqbifPnU3A/" target="__blank">
+										<i class="fa fa-youtube" aria-hidden="true"></i>
+									</a>
+								</div>
+								
+								<div class="social-media-button instagram">
+										<a href="https://www.instagram.com/aot_techfiesta/" target="__blank">
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+								</a>
+								</div>
+								
+								<div class="social-media-button envelope">
+										<a href="mailto:techfiesta@aot.edu.in?subject=I wanted you to ask something"
+										target="_top">
+											<i class="fa fa-envelope" aria-hidden="true"></i>
+									</a>
+								</div> 
+						</div>
+					</section>
+					
+					<section class="st-panel st-color" id="st-panel-2" style="overflow-y:scroll" >
+						<div id="Aboutcontainer">
+							<div id="message">
+									<h1 style='font-size:4em;text-align:center;'>Welcome to Techfiesta 2018 @ AOT</h1>
+								<a href="docs/RulesForParticipants.pdf" style="
+									text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+									font-family: Courier, monospace;
+									font-smoothing: antialiased;
+									margin: 0.8em .2;
+									font-size: 22px;
+									position: absolute;
+									color: whitesmoke;
+									bottom:-120%;
+									
+								" target="_blank">General Rules</a>
+								<a href="docs/How_to_participate.pdf" style="
+									text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+									font-family: Courier, monospace;
+									font-smoothing: antialiased;
+									margin: 0.8em .2;
+									font-size: 22px;
+									position: absolute;
+									color: whitesmoke;
+									bottom:-120%;
+									right:0%;
+								
+								" target="_blank">Guidelines for Participation</a>
+							</div>
+						</div>
+						<div style="position: absolute;
+						width: 300px;
+						height: 200px;
+						z-index: 15;
+						left: 0%;
+						bottom:0;
+						" >
+							<!-- <iframe   src="https://www.youtube.com/embed/d763uXgUwfg" frameborder="0"allowfullscreen></iframe> -->
+						</div>
+					</section>
+					
+					<section class="st-panel" id="st-panel-3" style="background:black;" >
+						<section id="features" class="features" >
+							<div class="box foo">
+									<h3 class="features-title">EVENTS</h3>
+									<div class="features-content">
+											<div data-features-tabs class="features-content-col">
+													<div id="feature-1" class="features-textblock animated fadeIn __active">
+															<h2 >
+																	<span class="main-text skew">Code Arena
+																			<span class="back-text glitch" style="color:#ecce01">Code Arena</span>
+																	</span>
+																</h2>
+															
+															<p>AOT Coding Club is excited to present you four events to test your coding skills:
+																</p>
+																<ul>
+																		<li>Coding Master's Challenge</li>
+																		<li>Ideate, Design, Launch</li>
+																		<li>Cyber Hunt</li>
+																		<li>Initiate Code: The Trail for Entrants</li>
+																		
+																</ul>
+															<a href="codearena.html" target="_blank"><button style="background-color: #4CAF50;
+																border: none;
+																color: white;
+																padding: 15px 32px;
+																text-align: center;
+																text-decoration: none;
+																display: inline-block;
+																font-size: 16px;
+																margin: 4px 2px;
+																font-family:'Quantum';
+																cursor: pointer;">EXPLORE MORE</button>
+															</a>
+													</div>
+													<div id="feature-2" class="features-textblock animated fadeIn">
+															
+													</div>
+													<div id="feature-3" class="features-textblock animated fadeIn">
+														<h2>
+															<span class="main-text skew">Robotics
+																<span class="back-text glitch" style="color:#a6d107">Robotics</span>
+															</span>
+														</h2>
+														<p>
+															AOT RoboClub brings you four exciting events to test your technical skill, controlling skill and 
+															team sprit.
+															So Build it.Drive it.Win it.
+														</p>
+														<ul>
+																<li>The 101</li>
+																<li>Feel The Thrill</li>
+																<li>RoboSalo</li>
+																<li>Line on Fire</li>
+														</ul>
+														<a href="robotics.html" target="_blank"><button style="background-color: #4CAF50;
+															border: none;
+															color: white;
+															padding: 15px 32px;
+															text-align: center;
+															text-decoration: none;
+															display: inline-block;
+															font-size: 16px;
+															font-family:'Quantum';
+															margin: 4px 2px;
+															cursor: pointer;">EXPLORE MORE</button></a>	
+													</div>
+													<div id="feature-4" class="features-textblock animated fadeIn">
+															<h2 >
+																	<span class="main-text skew">Brain Storm
+																			<span class="back-text glitch" style="color:#ff5a30">Brain Storm</span>
+																		</span>
+																</h2>
+															<p>
+																Utilise your technical knowhow. Three events that motivate you to visualise and design.
+																Let the concept in you minds find form.
+															</p>
+															<ul>
+																	<li>Quest for the new-age Drafter</li>
+																	<li>Design Schematics: Conceive the Circuit</li>
+																	<li>Operation Coding: The &micro;P & &micro;C Challenge</li>	
+															</ul>
+															<a href="brainstorm.html" target="_blank"><button style="background-color: #4CAF50;
+																border: none;
+																color: white;
+																padding: 15px 32px;
+																text-align: center;
+																text-decoration: none;
+																display: inline-block;
+																font-family:'Quantum';
+																font-size: 16px;
+																margin: 4px 2px;
+																cursor: pointer;">EXPLORE MORE</button></a>
+													</div>
+													<div id="feature-5" class="features-textblock animated fadeIn">
+															
+													</div>
+													<div id="feature-6" class="features-textblock animated fadeIn">
+															<h2>
+																	<span class="main-text skew">	Pioneer
+																			<span class="back-text glitch" style="color:#a905ab;">	Pioneer</span>
+																		</span>
+															</h2>
+															<p>
+																Are you ready for the 21st century? Unleash your creativity.
+																Think out of the box, Three events that challenge your minds & intellect
+															</p>
+																<ul>
+																	<li>Envisaging the Future: Call for Innovators.</li>
+																	<li>Soar with Drones.</li>
+																	<li>The Startup: An Invitation for the budding Entrepreneur.</li>
+															</ul>
+															<a href="pioneer.html" target="_blank"><button style="background-color: #4CAF50;
+																border: none;
+																color: white;
+																padding: 15px 32px;
+																text-align: center;
+																text-decoration: none;
+																display: inline-block;
+																font-size: 16px;
+																font-family:'Quantum';
+																margin: 4px 2px;
+																cursor: pointer;">EXPLORE MORE</button></a>
+													</div>
+											</div>
+											<div class="features-content-col">
+													<div data-features-nav class="features-graph">
+															<div class="button-holder">
+																<a href="#feature-1" class="icon-features-1 btn-with-icon __active">
+																	<span class="sq-bt-label label-top-left">CODE ARENA</span>
+																</a>
+																<a  class="icon-features-2 btn-with-icon" style="border: 1px solid transparent;" hidden>
+																	<span class="sq-bt-label label-top" hidden>ROBOTICS</span>
+																</a>
+																<a href="#feature-3" class="icon-features-3 btn-with-icon">
+																	<span class="sq-bt-label label-top-right">Robotics</span>
+																</a>
+															</div>
+															<div class="animation-holder">
+																	<span class="flash-oval">
+																 <img src="images/TF_logowhite.png" height="50px" width="50px"  alt="pulse">
+																 <div class="wave hidden wave-anim"></div>
+																 <div class="wave2 hidden wave-anim"></div>
+																 <div class="wave3 hidden wave-anim"></div>
+																 <div class="wave4 hidden wave-anim"></div>
+															</span>
+															</div>
+															<div class="button-holder">
+																	<a href="#feature-4" class="icon-features-4 btn-with-icon">
+																		<span class="sq-bt-label label-bottom-left">BRAIN STORM</span>
+																	</a>
+																	<a  class="icon-features-2 btn-with-icon" style="border: 1px solid transparent;" hidden>
+																			<span class="sq-bt-label label-top" hidden>ROBOTICS</span>
+																	</a>
+																	<a href="#feature-6" class="icon-features-6 btn-with-icon">
+																		<span class="sq-bt-label label-bottom-right">PIONEER</span>
+																	</a>
+																</div>
+													</div>
+											</div>
+									</div>
+									
+							</div>
+					</section>
+			
+								
+					</section>
+					
+					<section class="st-panel st-color" id="st-panel-4">
+						<div class="st-deco" data-icon="N"></div>
+						<div class="split-slideshow">
+							<div class="slideshow">
+							  <div class="slider">
+								<div class="item">
+								  <img src="images/gallery/CSC_0115.jpg" />
+								</div>
+								<div class="item">
+								  <img src="images/gallery/DSC_0104.jpg" />
+								</div>
+								<div class="item">
+								  <img src="images/gallery/DSC_0180.jpg" />
+								</div>
+								<div class="item">
+								  <img src="images/gallery/DSC_0214.jpg" />
+								</div>
+								<div class="item">
+								  <img src="images/gallery/DSC_0584.jpg" />
+								</div>
+								<div class="item">
+								  <img src="images/gallery/DSC_1626.jpg" />
+								</div>
+								
+								<div class="item">
+								  <img src="images/gallery/DSC_1654.jpg" />
+								</div>
+							  </div>
+							</div>
+							<div class="slideshow-text">
+								<div class="item"></div>
+								<div class="item"></div>
+								<div class="item"></div>
+								<div class="item"></div>
+							  <div class="item"></div>
+							  <div class="item"></div>
+								<div class="item"></div>
+								<div class="item"></div>
+								<div class="item"></div>
+								<div class="item"></div>
+							</div>
+						  </div>
+					</section>
+					
+					<section class="st-panel" id="st-panel-5" style="overflow-y: scroll;background:url('images/college.jpg') ;">
+							<canvas id="world"></canvas>
+						<div class="st-deco" data-icon="K"></div>
+
+						<div class="outer-div">
+							<div class="inner-div">
+							  <div class="front">
+								<div class="front__bkg-photo"></div>
+								<div style="position: relative;
+								top: -72px;
+								height: 150px;
+								width: 150px;
+								margin: 0 auto;
+								border-radius: 50%;
+								border: 3px solid #f1faee;
+								background: url('images/rishav1.jpg') no-repeat;
+								background-size: contain;
+								-webkit-backface-visibility: hidden;
+										backface-visibility: hidden;
+								overflow: hidden;
+								z-index: 3;">
+								</div>
+								<div class="front__text">
+								  <h3 class="front__text-header ">Rishav Kumar <br>
+									<span class="front__text-desc front__text-desc-emphasis">Registration</span>
+								  </h3>
+								</div>
+								<div class="front__footer">Hover to Connect</div>
+							  </div>
+							  <div class="back">
+								<div class="social-media-wrapper">
+									<a href="https://www.facebook.com/rishav.raj.336717" class="social-icon" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+									<a href="https://api.whatsapp.com/send?phone=919883823668" class="social-icon" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+						      <a onclick="alert('Mobile Number: +919883823668');" class="social-icon"><i class="fa fa-phone" aria-hidden="true"></i></a>
+								  <a href="https://www.instagram.com/rishavraj6" class="social-icon" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+								</div>
+							  </div>
+						  
+							</div>
+							<div class="inner-div">
+								<div class="front">
+								  <div class="front__bkg-photo"></div>
+								  <div class="front__face-photo"></div>
+								  <div class="front__text">
+									<h3 class="front__text-header">Santosh Kumar Shaw <br>
+									  <span class="front__text-desc front__text-desc-emphasis"> Code Arena</span>
+									</h3>
+								  </div>
+								  <div class="front__footer">Hover to connect</div>
+								</div>
+								<div class="back">
+								  <div class="social-media-wrapper">
+									<a href="https://www.facebook.com/devsks" class="social-icon" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+									<a href="https://api.whatsapp.com/send?phone=918583055132" class="social-icon" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+									<a href="https://www.google.co.in/search?q=devsks" class="social-icon" target="_blank"><i class="fa fa-code" aria-hidden="true"></i></a>
+									<a href="https://www.linkedin.com/in/devsks" class="social-icon" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+								  </div>
+								</div>
+							
+							  </div>
+						  </div>
+					
+					</section>
+
+				</div><!-- // st-scroll -->
+				
+			</div><!-- // st-container -->
+			
+		</div>
+		
+		<script
+				src="https://code.jquery.com/jquery-3.3.1.min.js"
+				integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+				crossorigin="anonymous">
+		</script>
+
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.min.js'></script><!-- 
+		<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script> -->
+		<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+
+		<!-- <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
+		 --><script src='https://code.jquery.com/ui/1.11.2/jquery-ui.js'></script>
+		<script src="js/modernizr.custom.79639.js"></script>
+		<script src="js/jquery-2.2.4.min.js"></script>
+		<script src="js/jQueryRotate.js"></script><!-- 
+		<script src="js/rocketman.js"></script> -->
+		<script src='js/slick.min.js'></script>
+		<script src='js/mousewheel.js'></script>
+		<script src="js/slideshow.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/event.js"></script>
+		<script src="js/canvas.js"></script>
+		<script src="js/about.js"></script>
+
+	</body>
+</html>

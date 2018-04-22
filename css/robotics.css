@@ -1,0 +1,793 @@
+@font-face {
+	font-family: 'Quantum';
+	src: url('fonts/Quantum.otf');
+}
+@font-face {
+	font-family: 'Crush';
+	src: url('fonts/Reboot_Crush.ttf');
+}
+body
+{
+  margin:0;
+  overflow-X:hidden;
+  font-family:"Raleway","Roboto","Helvetica",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing:antialiased;
+  -ms-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+  background:rgba(18,18,26,1);
+  background-image: url('http://artlantis-media.ru/static/img/0000/0002/7260/27260842.qvpm616fga.png');
+  background-blend-mode:overlay;
+  background-size:15%;
+}
+::-webkit-scrollbar
+{
+  display:none;
+}
+p {
+  font-size: 3.5vh;
+}
+/*Grid Wrapper*/
+ 
+#home
+{
+  color:white;
+  width:100%;
+  height:100%;
+  position:relative;
+  padding:100px;
+  display:block;
+  transition:transform 0.5s ease-in-out;
+}
+#home > section
+{
+  position:relative;
+}
+#home > .header > div
+{
+  position:relative;
+  display:inline-block;
+  margin-right:25px;
+  vertical-align:middle;
+  text-shadow:0px 5px 10px rgba(0,0,0,1);
+}
+#home > .pagetag
+{
+  position:absolute;
+  top:10px;
+  left:10px;
+  padding:10px 15px;
+  font-size:0.8em;
+  color:rgba(96,78,177,1);
+  background:rgba(0,0,0,0.1);
+}
+/*Heading*/
+#home .logo
+{
+  position: absolute;
+  width:200px;
+  height:180px;
+  background-image:url("../images/roblogo.png") ;
+  background-size:100%;
+  background-position:50% 50%;
+ }
+#home h2
+{
+  font-weight:300;
+  letter-spacing:0.07em;
+  margin-left:-20px;
+}
+#home h5
+{
+  margin-top:-20px;
+  font-weight:400;
+  letter-spacing:1.9em;
+}
+#home h2>span:first-child
+{
+  font-size:3em;
+}
+#home h2>span:nth-child(2)
+{
+  font-size:2em;
+  margin-left:-0.2em;
+  font-weight:400;
+}
+#grid_wrapper
+{
+  width:100%;
+  display:inline-block;
+  margin-top:60px;
+  box-sizing:border-box;
+  padding:0px 20px;
+  margin-left:-100px;
+  position:relative;
+}
+#grid_wrapper.init>card
+{
+  transform:scale(0);
+}
+#grid_wrapper>card
+{
+  display:block;
+  width:25%;
+  height:200px;
+  float:left;
+  transition:transform 0.3s cubic-bezier(0,0,0,1);
+  padding:20px;
+  box-sizing:border-box;
+}
+#grid_wrapper>card>div,#content_wrapper>.clone
+{
+  color:white;
+  cursor:pointer;
+  width:100%;
+  height:100%;
+  position:relative;
+  transition:box-shadow 0.3s;
+  overflow:hidden;
+  border:1px solid rgba(66,76,119,0.1);
+  box-shadow:0px 20px 50px 0px rgba(0,0,0,0.2);
+}
+#grid_wrapper>card>div.active
+{
+  opacity:0;
+}
+#grid_wrapper>card>div:hover
+{
+  box-shadow:0px 30px 60px 0px rgba(0,0,0,0.25);
+}
+#grid_wrapper>card>div:before,#content_wrapper>.clone:before
+{
+  width:100%;
+  height:100%;
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  background-size:100%;
+  background-position:50% 50%;
+  background-blend-mode:overlay;
+  background-image:url("https://emersonkeeling.files.wordpress.com/2015/12/ahfod.gif");
+  background-color:rgba(43,26,119,0.25);
+  transition:all 0.2s;
+  -webkit-filter:blur(3px);
+  -moz-filter:blur(3px);
+  filter:blur(3px);
+  -ms-filter:blur(3px);
+}
+#grid_wrapper>card>div>span,#content_wrapper>.clone>span
+{
+  width:100%;
+  height:50px;
+  margin-top:-25px;
+  top:50%;
+  font-family: 'Quantum';
+  position:absolute;
+  line-height:50px;
+  display:block;
+  text-align:center;
+  font-size:1.3em;
+  opacity:1;
+}
+/*End of Section*/
+
+/*NavBar Style*/
+/*Comes up only when you're open in a section*/
+nav.main
+{
+  overflow-X:auto;
+  overflow-Y:visible;
+  z-index:+25;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:55px;
+  display:block;
+  white-space:nowrap;
+}
+body:after,#footer:after,#footer:before
+{
+  /* background: linear-gradient(90deg, rgba(190,78,114,1) 0%, rgba(254,117,98,1) 33.33%, rgba(86,72,105,1) 66.66%,  rgba(126,70,99,1) 100%) */
+  background-image: linear-gradient(90deg, rgba(107,208,228,1) 0%, rgba(96,78,177,1) 33%, rgba(200,142,102,1) 66%, rgba(201,85,169,1) 100%); /* w3c */
+  content:"";
+  position:fixed;
+  width:100%;
+  top:0px;
+  left:0px;
+  height:5px;
+  z-index:+30;
+}
+nav.main.inactive>.tab
+{
+  transform:rotateX(90deg) translateY(-25px);
+}
+nav.main>.tab
+{
+  transform-origin:50% 0% 0px;
+  background:#fff;
+  box-sizing:border-box;
+  /* border-top:5px solid; */
+  font-weight:600;
+  font-size:0.9em;
+  color:#161725;
+  display:inline-block;
+  width:25%;
+  text-align:center;
+  line-height:45px;
+  height:100%;
+  border-top:rgba(0,0,0,0.5) 5px solid;
+  position:relative;
+  cursor:pointer;
+  overflow:hidden;
+  transition:transform 0.5s cubic-bezier(0,0,0,1);
+}
+nav.main>.tab.active
+{
+  z-index:+5000;
+}
+nav.main>.tab.active>span
+{
+  background:#d5d5d5;
+}
+nav.main>.tab>span
+{
+  width:100%;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  height:100%;
+  display:block;
+  transform:line-height 0.2s;
+}
+nav.main>.tab:not(.active)>span:hover
+{
+  background:#dadada;
+}
+nav.main>.tab:after
+{
+  content:"";
+  top:0;
+  right:0;
+  position:absolute;
+  border-top:0px solid transparent;
+  border-bottom:50px solid transparent;
+  border-right:0px solid rgba(0,0,0,0.05);
+  transition:all 0.2s;
+}
+nav.main>.tab:hover:after
+{
+  content:"";
+  right:0;
+  position:absolute;
+  border-top:0px solid transparent;
+  border-bottom:55px solid transparent;
+  border-right:10px solid rgba(0,0,0,0.1);
+}
+/*End of Section*/
+
+/*Ripple Styling*/
+.ripple
+{
+  position:fixed;
+  animation:ripple 1s 1 ease-out;
+  background:rgba(0,0,0,0.5);
+  margin:-250px;
+  width:500px;
+  height:500px;
+  transform:scale(10);
+  position:absolute;
+  border-radius:50%;
+  opacity:0;
+}
+  
+/*One for the BIIIIG ONE!*/
+
+.mega.ripple
+{
+  border-radius:50%;
+  background:rgba(255,255,255,0.1);
+  opacity:1;
+}
+@keyframes ripple
+{
+  0%{
+    opacity:1;
+    transform:scale(0);
+  }
+}
+/*End of Section*/
+
+/*This one Wraps content of the tabs*/
+#content_wrapper.inactive
+{
+ pointer-events:none; 
+}
+#content_wrapper
+{
+  position:fixed;
+  z-index:+20;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  display:block;
+  perspective:1000px;
+}
+#content_wrapper>div.content
+{
+  z-index:+50;
+  position:fixed;
+  top:0;
+  width:100%;
+  height:100%;
+  left:0;
+  display:block;
+  box-sizing:border-box;
+  padding:5%;
+  padding-top:50px;
+}
+#content_wrapper>div.clone.deactivate
+{
+   background:linear-gradient(#14151a,#161725); 
+}
+#content_wrapper>div.clone.deactivate>span{
+  font-size:50em;
+  opacity:0;
+  animate:blow 0.5s 0s cubic-bezier(0,0,0,1);
+}
+@keyframes blow
+{
+  to{
+    font-size:50em;
+    opacity:0;
+  }
+}
+#content_wrapper>div.clone.deactivate:before
+{
+  animation:fadeOut 0.25s 0s 1 cubic-bezier;
+  opacity:0;
+}
+@keyframes fadeOut
+{
+  from{
+    opacity:1;
+  }
+}
+#content_wrapper>div.clone
+{
+  width:100%;
+  height:100%;
+  transform-origin:50% 50%;
+  position:absolute;
+  transform-origin:50% 50%;
+  transform:translate(-50%,-50%) rotateY(180deg);
+  animation:flipOpen 0.5s 0s 1 cubic-bezier(0,0,0,1);
+}
+
+#content_wrapper.inactive>div.clone
+{
+  animation:flipClose 0.7s 0s 1 cubic-bezier(0,0,0,1);
+  transform:translate(-50%,-50%);
+  position:absolute;
+}
+@keyframes flipOpen
+{
+  from{
+    transform:translate(-50%,-50%);
+  }
+}
+@keyframes flipClose
+{
+  from{
+    transform:translate(-50%,-50%) rotateY(180deg);
+  }
+}
+#content_wrapper>div.content>section.active
+{
+  opacity:1;
+  transform:none;
+}
+#content_wrapper>div.content>section{
+  color:white;
+  position:absolute;
+  top:8%;
+  left:5%;
+  right: 5%;
+  opacity:0;
+  bottom: 2%;
+}
+
+#content_wrapper.inactive>button
+{
+  opacity:0;
+}
+
+#content_wrapper>button
+{
+  z-index:+100;
+  transition:opacity 0.2s 1s;
+  padding:20px;
+  font-family:"FontAwesome";
+  color:white;
+  font-size:1.2em;
+  background:none;
+  outline:none;
+  border:none;
+  position:fixed;
+  top:60px;
+  right:0;
+  cursor:pointer;
+}
+/*End of Section*/
+
+/*Footer Design*/
+#footer
+{
+  font-size:0.9em;
+  position:relative;
+  margin-top:200px;
+  width:100%;
+  height:70px;
+  text-align:center;
+  color:rgba(255,255,255,0.3);
+  z-index:+15;
+}
+#footer:before
+{
+  position:absolute;
+  top:0;
+  height:3px;
+}
+#footer:after
+{
+  position:absolute;
+  bottom:1px;
+  top:unset;
+  height:3px;
+}
+/*End of Section*/
+/* COLORS
+========================================== */
+/* MIXINS
+========================================== */
+/* RESET
+========================================== */
+ *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CONTACT
+========================================== */
+.contact-area {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact {
+  position: relative;
+  max-width: 420px;
+  padding: 40px 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@media (min-width: 1024px) {
+  .contact {
+    position: relative;
+    top: 50%;
+   
+  }
+}
+.contact main {
+  float: left;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+.contact main section {
+  border-radius: 5px;
+  float: left;
+  width: 100%;
+  background-color: #eb524a;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.contact main section .content {
+  float: left;
+  width: 100%;
+  padding: 0px 30px 20px 30px;
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+}
+@media (min-width: 414px) {
+  .contact main section .content {
+    text-align: left;
+  }
+}
+.contact main section .content img {
+  display: inline-block;
+  width: 140px;
+  border-radius: 50%;
+}
+@media (min-width: 414px) {
+  .contact main section .content img {
+    float: left;
+    width: 30%;
+    margin-right: 10%;
+  }
+}
+.contact main section .content aside {
+  float: left;
+  width: 100%;
+  color: #ffffff;
+  margin-top: 10px;
+}
+@media (min-width: 414px) {
+  .contact main section .content aside {
+    width: 60%;
+  }
+}
+.contact main section .content aside h1 {
+  font-weight: 100;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.contact main section .content aside p {
+  font-size: 14px;
+  letter-spacing: .5px;
+  line-height: 160%;
+}
+.contact main .title {
+  float: left;
+  width: 100%;
+  background-color: #c63535;
+  max-height: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+  -webkit-transition: all 0.55s;
+  -moz-transition: all 0.55s;
+  -o-transition: all 0.55s;
+  transition: all 0.55s;
+}
+.contact main .title.active {
+  max-height: 100px;
+  -webkit-transition: all 1.3s;
+  -moz-transition: all 1.3s;
+  -o-transition: all 1.3s;
+  transition: all 1.3s;
+}
+.contact main .title.active p {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  transition-delay: .2s;
+}
+.contact main .title p {
+  padding: 15px 30px;
+  color: #ffffff;
+  font-size: 16px;
+  display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.contact main button {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  background-color: #ffbe44;
+  color: #c63535;
+  border: 0;
+  width: 200px;
+  height: 48px;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 16px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  margin-bottom: -24px;
+  margin-right: -100px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  transition-delay: .1s;
+  outline: none;
+  overflow: hidden;
+  z-index: 10;
+  font-family: inherit;
+}
+.contact main button span {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  transition-delay: .4s;
+  display: block;
+  
+  float: left;
+  padding: 8px 0px;
+}
+.contact main button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.contact main button svg path {
+  fill: #c63535;
+}
+.contact main button.active {
+  margin-right: 0;
+  right: 20px;
+  width: 65px;
+  height: 65px;
+  margin-bottom: -32.5px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 65px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+.contact main button.active span {
+  opacity: 0;
+  transition-delay: 0s;
+  width: 200px;
+}
+.contact main button.active svg {
+  opacity: 1;
+  transition-delay: .5s;
+}
+.contact nav {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  max-height: 0px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.contact nav.active {
+  max-height: 600px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.contact nav.active a {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.contact nav.active a:nth-of-type(1) {
+  transition-delay: .5s;
+}
+.contact nav.active a:nth-of-type(2) {
+  transition-delay: .7s;
+}
+.contact nav.active a:nth-of-type(3) {
+  transition-delay: .9s;
+}
+.contact nav a {
+  float: left;
+  width: 100%;
+  margin-top: 18px;
+  background-color: #ffffff;
+  padding: 18px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  transform: translateY(-10px);
+  position: relative;
+}
+@media (min-width: 414px) {
+  .contact nav a {
+    padding: 18px 30px;
+  }
+}
+.contact nav a .arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.contact nav a .arrow path {
+  fill: #e6e6e6;
+}
+.contact nav a.gmail .icon svg {
+  background-color: #d14836;
+}
+.contact nav a.gmail .content h1 {
+  color: #d14836;
+}
+.contact nav a.facebook .icon svg {
+  background-color: #3b5998;
+}
+.contact nav a.facebook .content h1 {
+  color: #3b5998;
+}
+.contact nav a.twitter .icon svg {
+  background-color: #1da1f2;
+}
+.contact nav a.twitter .content h1 {
+  color: #1da1f2;
+}
+.contact nav a .icon {
+  float: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.contact nav a .icon svg {
+  width: 100%;
+  height: 100%;
+  padding: 14px;
+}
+.contact nav a .icon svg path {
+  fill: #ffffff;
+}
+.contact nav a .content h1 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: .4px;
+}
+.contact nav a .content span {
+  font-size: 14px;
+  color:black;
+  display: block;
+  letter-spacing: .4px;
+}
